@@ -66,7 +66,7 @@
         <li id="liLimparVenda" class="disableicon"><a id="aLimparVenda" class="disable" href="#" ng-click ="limparVenda()">Limpar Venda (F2)</a></li>
         <li id="liCancelarVenda" class="disableicon"><a id="aCancelarVenda" class="disable" href="#" ng-click ="cancelarVenda()">Cancelar Venda (F4)</a></li>
         <li class="dropdown" id="liEscolherCliente">
-          <a href="#" id="aEscolherCliente" class="dropdown-toggle " data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Escolher Cliente (F7) <span class="caret"></span></a>
+          <input id="provider-json-client" id="aEscolherCliente" class="form-control" ng-model="inputitem.index" placeholder="Procure o produto..."/>
           <ul class="dropdown-menu" >
             <li ng-repeat="client in listofClient.clientes"><a href ng-click ="initCompra(client.cpf, client.nome)">{{client.nome}}</a></li>
           </ul>
@@ -91,7 +91,7 @@
       <label style="margin-top: 7px; margin-left: 12px; "> X </label>
     </div>
     <div class="input-group col-lg-9 col-sm-9 col-md-9 col-xs-8 ajusteMenu">
-    <input id="provider-json" class="form-control" ng-model="inputitem.index" placeholder="Procure o produto..."/>
+    <input id="provider-json-produto" class="form-control" ng-model="inputitem.index" placeholder="Procure o produto..."/>
       <span id="spanAdicionar"class="input-group-btn disableicon">
         <button id="Adicionar" class="btn btn-secondary disable" type="button" ng-click="addList()">Adicionar</button>
       </span>

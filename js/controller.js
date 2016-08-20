@@ -5,18 +5,36 @@ $(document).ready(function() {
     var options = {
     	url: "listProdutos.json",
       	listLocation: "produtos",
-      	getValue: "nome",
+      	getValue: "nome","codigodebarras",
 
         list: {
           	onSelectItemEvent: function() {
-            		value = $("#provider-json").getSelectedItemData().Idproduto;
+            		value = $("#provider-json-produto").getSelectedItemData().Idproduto;
             }, 
             match: {
           		enabled: true
         	}
         }
     };
-    $("#provider-json").easyAutocomplete(options);
+    $("#provider-json-produto").easyAutocomplete(options);
+});
+
+$(document).ready(function() {
+    var options = {
+    	url: "listClientes.json",
+      	listLocation: "clientes",
+      	getValue: "nome",
+
+        list: {
+          	onSelectItemEvent: function() {
+            		value = $("#provider-json-client").getSelectedItemData().Idproduto;
+            }, 
+            match: {
+          		enabled: true
+        	}
+        }
+    };
+    $("#provider-json-client").easyAutocomplete(options);
 });
 
 appHashtag.controller("lenoCtrl", ['$scope', '$http', '$window',function($scope, $http,$window){
