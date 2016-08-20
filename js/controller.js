@@ -5,7 +5,7 @@ $(document).ready(function() {
     var options = {
     	url: "listProdutos.json",
       	listLocation: "produtos",
-      	getValue: "nome","codigodebarras",
+      	getValue: "nome",
 
         list: {
           	onSelectItemEvent: function() {
