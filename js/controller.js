@@ -125,6 +125,11 @@ appHashtag.controller("lenoCtrl", ['$scope', '$http', '$window',function($scope,
 	    	$scope.listofProduto = response;
 	    });	
     };
+    var clienteList = function(){
+		$http.get(endereco+"/listClientes.php").success(function(response){
+	    	$scope.listofProduto = response;
+	    });	
+    };
 
     
 
@@ -224,5 +229,6 @@ appHashtag.controller("lenoCtrl", ['$scope', '$http', '$window',function($scope,
 
 	returnVenda();
 	produtoList();
+	clienteList();
 }]);
     

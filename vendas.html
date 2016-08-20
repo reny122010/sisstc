@@ -65,12 +65,7 @@
     <ul class="nav navbar-nav ">
         <li id="liLimparVenda" class="disableicon"><a id="aLimparVenda" class="disable" href="#" ng-click ="limparVenda()">Limpar Venda (F2)</a></li>
         <li id="liCancelarVenda" class="disableicon"><a id="aCancelarVenda" class="disable" href="#" ng-click ="cancelarVenda()">Cancelar Venda (F4)</a></li>
-        <li class="dropdown" id="liEscolherCliente">
-          <input id="provider-json-client" id="aEscolherCliente" class="form-control" ng-model="inputitem.index" placeholder="Procure o produto..."/>
-          <ul class="dropdown-menu" >
-            <li ng-repeat="client in listofClient.clientes"><a href ng-click ="initCompra(client.cpf, client.nome)">{{client.nome}}</a></li>
-          </ul>
-        </li>
+          <input id="provider-json-client" id="aEscolherCliente" class="form-control" ng-model="inputcliente.index" placeholder="Procure o cliente..."/>
     </ul>
     <div class="navbar-right">
       <a class="navbar-brand">
@@ -85,7 +80,7 @@
   <div class="col-lg-9 col-sm-9 col-md-9 col-xs-9">
   <div class="row ">
     <div class="col-lg-2 col-sm-2 col-md-2 col-xs-3">
-      <input type="text" id="qnt" class="form-control" ng-model="inputitem.qnt" placeholder="QNT">
+      <input type="text" value="1" id="qnt" class="form-control" ng-model="inputitem.qnt">
     </div>
     <div class="col-lg-1 col-sm-1 col-md-1 col-xs-1">
       <label style="margin-top: 7px; margin-left: 12px; "> X </label>
