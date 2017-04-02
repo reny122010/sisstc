@@ -8,8 +8,8 @@ class A {
     function  __construct(){ 
     	$server="servidor2.stchost.com.br";
 		 $db="sisstc";
-		 $user="stchost";
-		 $pass="os@Ruam08@";
+		 $user="--------";
+		 $pass="--------";
  		$conecta = mysql_connect($server, $user, $pass) or print (mysql_error()); 
 		mysql_select_db($db, $conecta) or print(mysql_error()); 
 		$sql = "SELECT cpf, nome FROM tbcliente"; 
